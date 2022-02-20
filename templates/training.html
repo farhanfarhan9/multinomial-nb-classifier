@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Klasifikasi | Naive Bayes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css" />
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav style="background: rgb(220,220,220);" class="navbar navbar-expand-md navbar-dark fixed-top bg-lighting">
+        <a class="navbar-brand" href="#"><label style="color: black; font-style: bold">Training data kronologi</label></a>
+      </nav>
+    </header>
+    <div style="height: 70px"></div>
+      <form class="form-horizontal" action="http://localhost:5000/training_result" enctype="multipart/form-data" method="post">
+          <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Import data training <i>(.csv)</i></label>
+              <div class="col-md-12">
+              <input id="file" name="file_dataset" type="file" placeholder="format (.csv)" class="form-control input-md">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="btn-group">
+                <button id="svm" name="svm" type="submit" class="btn btn-primary hilang" style="margin-right: 5px; margin-left: 10px;">Submit</button>
+                <button type="button" class="btn display-hide btn-default" id="hiden">Download</button>
+            </div>
+            <style>
+              .display-hide{
+                display: none;
+              }
+              a.line,a.line:hover{
+                text-decoration: none;
+              }
+              .btn-group button {
+                border-radius: 10px!important;
+              }
+            </style>
+          </fieldset>
+      </form>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+  </body>
+</html>

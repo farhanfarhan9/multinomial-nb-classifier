@@ -1,0 +1,196 @@
+<!-- <html>
+    <head>
+        <title>Support Vector Machine</title>
+        <style>
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #result {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #result td, #result th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #result tr:nth-child(even){background-color: #f2f2f2;}
+
+            #result tr:hover {background-color: #ddd;}
+
+            #result th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            #label {
+                width: 10%;
+                text-align: center;
+            }
+
+            #classification {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="font-family: Trebuchet MS, Arial, Helvetica, sans-serif; text-align: center">Support Vector Machine Classification Report</h1>
+        <table class="center" id="result">
+            <tr>
+                <th>-</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+                <th>Support</th>
+            </tr>
+            <tr>
+                <td>non-pornografi</td>
+                <td id="classification">{{ data[1][5] | safe }}</td>
+                <td id="classification">{{ data[1][6] | safe }}</td>
+                <td id="classification">{{ data[1][7] | safe }}</td>
+                <td id="classification">{{ data[1][8] | safe }}</td>
+            </tr>
+            <tr>
+                <td>pornografi</td>
+                <td id="classification">{{ data[1][10] | safe }}</td>
+                <td id="classification">{{ data[1][11] | safe }}</td>
+                <td id="classification">{{ data[1][12] | safe }}</td>
+                <td id="classification">{{ data[1][13] | safe }}</td>
+            </tr>
+            <tr>
+                <td>avg / total</td>
+                <td id="classification">{{ data[1][17] | safe }}</td>
+                <td id="classification">{{ data[1][18] | safe }}</td>
+                <td id="classification">{{ data[1][19] | safe }}</td>
+                <td id="classification">{{ data[1][20] | safe }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Akurasi</td>
+                <td colspan="4" style="text-align: center; font-weight: bold">{{data[0]|safe}}</td>
+            </tr>
+        </table>
+    </body>
+</html>
+ -->
+ <html>
+    <head>
+        <title>Hasil Klasifikasi | Klasifikasi Jenis Pasal UU ITE</title>
+        <style>
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #result {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #result td, #result th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #result tr:nth-child(even){background-color: #f2f2f2;}
+
+            #result tr:hover {background-color: #ddd;}
+
+            #result th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            #label {
+                width: 10%;
+                text-align: center;
+            }
+
+            #classification {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="font-family: Trebuchet MS, Arial, Helvetica, sans-serif; text-align: center">Naive Bayes Classification Report</h1>
+        <table class="center" id="result">
+            <tr>
+                <th>-</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+                <th>Support</th>
+            </tr>
+            <tr>
+                <td>Pasal 27 ayat 1</td>
+                <td id="classification">{{ data[1][8] | safe }}</td>
+                <td id="classification">{{ data[1][9] | safe }}</td>
+                <td id="classification">{{ data[1][10] | safe }}</td>
+                <td id="classification">{{ data[1][11] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal 27 ayat 2</td>
+                <td id="classification">{{ data[1][16] | safe }}</td>
+                <td id="classification">{{ data[1][17] | safe }}</td>
+                <td id="classification">{{ data[1][18] | safe }}</td>
+                <td id="classification">{{ data[1][19] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal 27 ayat 3</td>
+                <td id="classification">{{ data[1][24] | safe }}</td>
+                <td id="classification">{{ data[1][25] | safe }}</td>
+                <td id="classification">{{ data[1][26] | safe }}</td>
+                <td id="classification">{{ data[1][27] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal 27 ayat 4</td>
+                <td id="classification">{{ data[1][32] | safe }}</td>
+                <td id="classification">{{ data[1][33] | safe }}</td>
+                <td id="classification">{{ data[1][34] | safe }}</td>
+                <td id="classification">{{ data[1][35] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal 28 ayat 1</td>
+                <td id="classification">{{ data[1][40] | safe }}</td>
+                <td id="classification">{{ data[1][41] | safe }}</td>
+                <td id="classification">{{ data[1][42] | safe }}</td>
+                <td id="classification">{{ data[1][43] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal 28 ayat 2</td>
+                <td id="classification">{{ data[1][48] | safe }}</td>
+                <td id="classification">{{ data[1][49] | safe }}</td>
+                <td id="classification">{{ data[1][50] | safe }}</td>
+                <td id="classification">{{ data[1][51] | safe }}</td>
+            </tr>
+            <tr>
+                <td>Pasal lainnya</td>
+                <td id="classification">{{ data[1][54] | safe }}</td>
+                <td id="classification">{{ data[1][55] | safe }}</td>
+                <td id="classification">{{ data[1][56] | safe }}</td>
+                <td id="classification">{{ data[1][57] | safe }}</td>
+            </tr>
+            <!-- <tr>
+                <td>avg / total</td>
+                <td id="classification">{{ data[1][17] | safe }}</td>
+                <td id="classification">{{ data[1][18] | safe }}</td>
+                <td id="classification">{{ data[1][19] | safe }}</td>
+                <td id="classification">{{ data[1][20] | safe }}</td>
+            </tr> -->
+            <tr>
+                <td style="font-weight: bold">Akurasi</td>
+                <td colspan="4" style="text-align: center; font-weight: bold">{{data[0]|safe}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Identifikasi Dokumen | Naive Bayes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css" />
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="../static/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <nav style="background: rgb(220,220,220);" class="navbar navbar-expand-md navbar-dark fixed-top bg-lighting">
+        <a class="navbar-brand" href="#"><label style="color: black; font-style: bold">Uji Dokumen Klasifikasi Naive Bayes</label></a>
+      </nav>
+    </header>
+    <div style="height: 70px"></div>
+      <form class="form-horizontal" action="http://localhost:5000/testing_document_result" enctype="multipart/form-data" method="post">
+          <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Import Dokumen <i>(.txt)</i></label>
+              <div class="col-md-12">
+              <input id="file" name="file_testing" type="file" placeholder="format (.txt)" class="form-control input-md">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="btn-group">
+                <button id="svm" name="svm" type="submit" class="btn btn-primary hilang" style="margin-right: 5px; margin-left: 10px;">Submit</button>
+                <!--<button type="button" class="btn display-hide btn-default" id="hiden">Download</button>-->
+            </div>
+            <style>
+              .display-hide{
+                display: none;
+              }
+              a.line,a.line:hover{
+                text-decoration: none;
+              }
+              .btn-group button {
+                border-radius: 10px!important;
+              }
+            </style>
+          </fieldset>
+      </form>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+
+
+
+<script src="../static/jquery.dataTables.min.js"></script>
+<script src="../static/dataTables.buttons.min.js"></script>
+<script src="../static/buttons.colVis.min.js"></script>
+<script src="../static/buttons.html5.min.js"></script>
+<script src="../static/buttons.print.min.js"></script>
+<script src="../static/dataTables.bootstrap.min.js"></script>
+<script src="../static/buttons.bootstrap.min.js"></script>
+<script src="../static/jszip.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/'></script>
+<script src="../static/jsvfs_fonts.js"></script>
+<script src="../static/js/pdfmake.min.js"></script>
+
+
+
+    <script  src="../static/js/index.js"></script>
+
+  </body>
+</html>
