@@ -5,6 +5,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 
 import json, os, csv
 import pandas as pd
+import datetime
 
 UPLOAD_FOLDER = 'data/'
 ALLOWED_EXTENSIONS = set(['json'])
@@ -73,28 +74,48 @@ def test_classification_result():
 @app.route('/testing_document_result', methods=['POST', 'GET'])
 def hasil_uji_dokumen():
     error = ""
-    if 'file_testing' in request.files:
-        filetext = request.files["file_testing"]
+    if 'text_textbox' in request.form:
+        filetextnya = request.form['text_textbox']
         # print(filetext)
-        filetext = request.files["file_testing"]
-        if filetext and allowed_file_txt(filetext.filename):
-            filename = secure_filename(filetext.filename)
-            filetext.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            with open(os.path.join(app.config['UPLOAD_FOLDER'], filetext.filename), 'r', encoding='utf-8') as f:
-                text = f.read()
-                f.close()
-        else:
-            error = "Format file salah !"
-
-    datatestPath = 'data/' + filetext.filename
-    nbModelPath = 'data/data_pasal_bersih.csv'
+        filenamenya = "uploaded"+datetime.datetime.now().strftime('%Y%m%d%H%M%S%f')+".txt"
+        try:
+            with open(os.path.join(app.config['UPLOAD_FOLDER'], filenamenya), 'w', encoding='utf-8') as f:
+                f.write(filetextnya)
+        except FileNotFoundError:
+            print("The 'data' directory does not exist")
 
 
-    objTest = NbModel(nbModelPath)
-    # split_p = objTest.split_data()
-    cerita_train_tf, cerita_test_tf, label_train, label_test = objTest.split_data()
-    objTest.nb(cerita_train_tf, label_train)
-    read_file = objTest.read_split(datatestPath)
+        datatestPath = 'data/' + filenamenya
+        nbModelPath = 'data/data_pasal_bersih.csv'
+        objTest = NbModel(nbModelPath)
+        cerita_train_tf, cerita_test_tf, label_train, label_test = objTest.split_data()
+        objTest.nb(cerita_train_tf, label_train)
+        read_file = objTest.read_split(datatestPath)
+    
+    else:
+        if 'file_testing' in request.files:
+            filetext = request.files["file_testing"]
+            # print(filetext)
+            # filetext = request.files["file_testing"]
+            if filetext and allowed_file_txt(filetext.filename):
+                filename = secure_filename(filetext.filename)
+                filetext.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filetext.filename), 'r', encoding='utf-8') as f:
+                    text = f.read()
+                    f.close()
+            else:
+                error = "Format file salah !" 
+
+            datatestPath = 'data/' + filetext.filename
+            nbModelPath = 'data/data_pasal_bersih.csv'
+
+
+            objTest = NbModel(nbModelPath)
+            # split_p = objTest.split_data()
+            cerita_train_tf, cerita_test_tf, label_train, label_test = objTest.split_data()
+            objTest.nb(cerita_train_tf, label_train)
+            read_file = objTest.read_split(datatestPath)
+    
 
     hasilnya = objTest.ProcessingText(read_file)
 

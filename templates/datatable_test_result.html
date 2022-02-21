@@ -1,71 +1,80 @@
 <html>
-    <head>
-        <title>Klasifikasi Jenis Pasal UU ITE</title>
 
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-        <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
-        <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'>
-        <link rel="stylesheet" href="../static/css/style.css">
-        <style>
-            table.center {
-                margin-left: auto;
-                margin-right: auto;
-            }
+<head>
+  <title>Klasifikasi Jenis Pasal UU ITE</title>
 
-            #result {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-            #result td, #result th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
+    #result {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-            #result tr:nth-child(even){background-color: #f2f2f2;}
+    #result td,
+    #result th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
 
-            #result tr:hover {background-color: #ddd;}
+    #result tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
 
-            #result th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: center;
-                background-color: #4CAF50;
-                color: white;
-            }
+    #result tr:hover {
+      background-color: #ddd;
+    }
 
-            #label {
-                width: 10%;
-                text-align: center;
-            }
+    #result th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+    }
 
-            #classification {
-                text-align: center;
-            }
+    #label {
+      width: 10%;
+      text-align: center;
+    }
 
-            .dataframe{
-              width:500px !important;
-              padding:10px !important;
-            }
-        </style>
-    </head>
-    <body>
-      <div style="margin-top: 8px;"></div>
-      <h1 style="font-family: Trebuchet MS, Arial, Helvetica, sans-serif; text-align: center">Hasil Klasifikasi Kronologi</h1>
-      <!-- {{data}} -->
-      <table class="center" id="result">
-          <tr>
-              <th>Kalimat</th>
-              <th>Label</th>
-          </tr>
-      {% for i in range(data[0]["kalimat"]|count) %}
-          <tr>
-              <td>{{ data[0]["kalimat"][i] | safe}}</td>
-              <td id="label">{{ data[0]["label"][i] | safe}}</td>
-          </tr>
-      {% endfor %}
-    </table></br></br><!-- 
+    #classification {
+      text-align: center;
+    }
+
+    .dataframe {
+      width: 500px !important;
+      padding: 10px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin-top: 8px;"></div>
+  <h1 style="font-family: Trebuchet MS, Arial, Helvetica, sans-serif; text-align: center">Hasil Klasifikasi Kronologi
+  </h1>
+  <!-- {{data}} -->
+  <table class="center" id="result">
+    <tr>
+      <th>Kalimat</th>
+      <th>Label</th>
+    </tr>
+    {% for i in range(data[0]["kalimat"]|count) %}
+    <tr>
+      <td>{{ data[0]["kalimat"][i] | safe}}</td>
+      <td id="label">{{ data[0]["label"][i] | safe}}</td>
+    </tr>
+    {% endfor %}
+  </table></br></br>
+  <!-- 
     <table class = "center" id="result">
       <tr>
         <th colspan = 2>Keterangan Hasil</th>
@@ -98,6 +107,7 @@
 
 
 
-      <script  src="../static/js/index.js"></script>
-    </body>
+  <script src="../static/js/index.js"></script>
+</body>
+
 </html>

@@ -2,12 +2,14 @@
 import re
 import pandas as pd
 import time
+import nltk
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import metrics
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn import svm
 from sklearn.naive_bayes import MultinomialNB
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
