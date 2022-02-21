@@ -1,37 +1,63 @@
-.modal-content {
-  position: relative;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0;
-  outline: none;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
+*{
+  color: #263238 !important;
 }
-.modal-header {
-  border-bottom: 1px solid #48a4ac;
-  background: #61bdc5;
-  min-height: 16.4286px;
+.jumbotron{
+  background: #7CD3A0 !important;
+  background-size: cover;
+  text-align: center;
+}
+
+.jumbotron .display-4{  
+  margin-top: 90px;
+  font-weight: 500;
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #263238;
+}
+
+section{
+  margin-top: 50px;
+}
+
+#features{
+  padding: 0 50px;
+}
+
+.space-bottom{
+  margin-bottom: 150px;
+}
+
+.text-justify{
+  line-height: 35px;
+}
+
+#content{
+  background-color: #EBEBE5;
+  padding: 50px 0;
+
+}
+
+.menu-apl{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
+span{
+  background-color:#7CD3A0 ;
+  color: #10616a !important;
   padding: 10px 15px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-.close {
-  float: right;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: .2;
-  filter: alpha(opacity=20);
-}
-.modal-body {
-  position: relative;
-  padding: 20px;
-}
-.modal-footer {
-  padding: 19px 20px 20px;
-  margin-top: 0;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
+
+
+@media (min-width: 992px) { 
+  .jumbotron{
+    
+  }
+  .header-img{
+    width: 450px;
+    height: 450px;
+  }
 }

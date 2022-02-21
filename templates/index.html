@@ -10,51 +10,90 @@
     <title>Klasifikasi Jenis Pasal UU ITE</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/custom.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/font-awesome.css" />
     <link rel="stylesheet" href="../static/css/font-awesome.min.css" />
   </head>
 
   <body>
-   <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-lighting">
-        <a class="navbar-brand color-font" href="#">Stemmer Performance</a>
-      </nav>
-    </header>
-
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5 text-center big-font roboto color-font padding-tb-50">Penerapan Text Mining Untuk Klasifikasi Jenis Pasal UU ITE Meggunakan Algoritma Naive Bayes</i></h1><br>
-      <div class="row pd-10 margin-0 text-center">
-        <div class="col text-center">
-          <a href="http://localhost:5000/training">
-            <button type="button" class="btn transparent rounded-circle pl250x250">
-              <img src="../static/images/summarization.png" width="50%"/>
-            </button>
-          </a>
-          <p class="padding-t10 color-p">
-            Training Klasifikasi
-          </p>
-        </div>
-        <div class="col text-center">
-          <a href="http://localhost:5000/uji_dokumen">
-            <button type="button" class="btn transparent rounded-circle pl250x250">
-               <img src="../static/images/identification.png" width="50%"/>
-            </button>
-          </a>
-          <p class="padding-t10 color-p">
-            Uji Dokumen
-          </p>
-        </div>
-      
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Penerapan Text Mining Untuk Klasifikasi Jenis Pasal UU ITE Meggunakan Algoritma Naive Bayes</h1>
       </div>
-    </main>
+    </div>
+    <section id="features">
+      <div class="container title space-bottom">
+        <div class="row">
+          <h1 class="col-lg text-center font-weight-normal">UU ITE</h1>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="text-justify">Undang-undang Informasi dan Transaksi Elektronik (UU ITE) adalah undang-undang yang membahas ketentuan hukum tentang permasalahan yang terjadi dalam bidang perkembangan teknologi informasi dan komunikasi yang timbul di masyarakat. Pelanggaran – pelanggaran yang terjadi seperti berita hoax dan ujaran kebencian adalah dua contoh yang paling sering ditemui di media sosial. Maka dari itu UU ITE difungsikan sebagai perlindungan dan jaminan atas keamanan pengguna pada saat berinternet </p>
+          </div>
+          <div class="col text-right">
+            <div class="ilustrasi"><img src="../static/images/undraw_diary_re_4jpc.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-3">
+          <h1 class="col-lg text-center font-weight-normal">Proses pelaporan UU ITE</h1>
+        </div>
+        <div class="row mb-3">
+          <p><span>1.</span>Diawali dengan pihak penggugat melaporkan kepada polisi dengan berkoordinasi dan melimpahkan berkas pelaporan kepada pihak kejaksaan.</p>   
+        </div>
+        <div class="row mb-3">
+          <p><span>2.</span>Pihak Jaksa mengeluarkan surat dakwaan diikuti dengan mengumpulkan bukti-bukti yang diserahkan pihak kepolosian sesuai dengan petunjuk jaksa.</p>
+        </div>
+        <div class="row ">
+          <p><span>3.</span>Setelah kedua proses diatas sudah dilaksanakan maka selanjutnya kasus tersebut dilimpahkan dam diproses di pengadilan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="container title">
+        <div class="row">
+          <h1 class="col-lg text-center font-weight-normal">Klasifikasi UU ITE</h1>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="text-justify">Permasalahan yang terjadi adalah waktu yang diperlukan dalam tahapan proses pelaporan dan peradilan tergolong lama karena itu aplikasi ini hadir sebagai solusi untuk membantu dan memudahkan masyarakat dalam mengklasifikasikan pasal yang dilanggar dalam UU ITE menggunakan kronologi kejadian.</p>
+          </div>
+        </div>
+        <div class="row text-center align-center">
+          <div class="col">
+            <div class="menu-apl" style="width: 22rem;">
+              <div class="card-body">
+                <img src="../static/images/binder.png" class="card-img-top" height="250px">
+                <h5 class="card-title">Training klasifikasi kronologi</h5>
+                <p class="card-text">Jika anda ingin melihat akurasi prediksi dari aplikasi silahkan masuk ke menu ini</p>
+                <a href="http://localhost:5000/training" class="btn btn-primary text-white">Klik disini</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="menu-apl" style="width: 22rem;">
+              <div class="card-body">
+                <img src="../static/images/find.png" lass="card-img-top" height="250px">
+                <h5 class="card-title">Uji Dokumen Kronologi</h5>
+                <p class="card-text">Jika anda ingin mengklasifikasikan kasus pelanggaran UU ITE anda silahkan masuk ke menu ini.</p>
+                <a href="http://localhost:5000/uji_dokumen" class="btn btn-primary text-white">Klik disini</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
